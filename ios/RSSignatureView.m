@@ -117,7 +117,7 @@
 			[saveButton setLineBreakMode:NSLineBreakByClipping];
 			[saveButton addTarget:self action:@selector(onSaveButtonPressed)
       forControlEvents:UIControlEventTouchUpInside];
-			[saveButton setTitle:@"Save" forState:UIControlStateNormal];
+			//[saveButton setTitle:@"Save" forState:UIControlStateNormal];
 			
 			CGSize buttonSize = CGSizeMake(55, 80.0); //Width/Height is swapped
 			
@@ -131,7 +131,7 @@
 			[clearButton setLineBreakMode:NSLineBreakByClipping];
 			[clearButton addTarget:self action:@selector(onClearButtonPressed)
 						forControlEvents:UIControlEventTouchUpInside];
-			[clearButton setTitle:@"Reset" forState:UIControlStateNormal];
+			//[clearButton setTitle:@"Reset" forState:UIControlStateNormal];
 			
 			clearButton.frame = CGRectMake(sign.bounds.size.width - buttonSize.width, 0, buttonSize.width, buttonSize.height);
 			[clearButton setBackgroundColor:[UIColor colorWithRed:250/255.f green:250/255.f blue:250/255.f alpha:1.f]];
