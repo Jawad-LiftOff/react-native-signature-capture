@@ -101,41 +101,41 @@
 		}
 		else {
 			
-			titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.height - 80, 24)];
-			[titleLabel setCenter:CGPointMake(40, self.bounds.size.height/2)];
-			[titleLabel setTransform:CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(90))];
+			// titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.height - 80, 24)];
+			// [titleLabel setCenter:CGPointMake(40, self.bounds.size.height/2)];
+			// [titleLabel setTransform:CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(90))];
 			//[titleLabel setText:@"x_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"];
-			[titleLabel setLineBreakMode:NSLineBreakByClipping];
-			[titleLabel setTextAlignment: NSTextAlignmentLeft];
-			[titleLabel setTextColor:[UIColor colorWithRed:200/255.f green:200/255.f blue:200/255.f alpha:1.f]];
+			// [titleLabel setLineBreakMode:NSLineBreakByClipping];
+			// [titleLabel setTextAlignment: NSTextAlignmentLeft];
+			// [titleLabel setTextColor:[UIColor colorWithRed:200/255.f green:200/255.f blue:200/255.f alpha:1.f]];
 			//[titleLabel setBackgroundColor:[UIColor greenColor]];
-			[sign addSubview:titleLabel];
+			// [sign addSubview:titleLabel];
 			
 			//Save button
-			saveButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-			[saveButton setTransform:CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(90))];
-			[saveButton setLineBreakMode:NSLineBreakByClipping];
-			[saveButton addTarget:self action:@selector(onSaveButtonPressed)
-      forControlEvents:UIControlEventTouchUpInside];
+			// saveButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+			// [saveButton setTransform:CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(90))];
+			// [saveButton setLineBreakMode:NSLineBreakByClipping];
+			// [saveButton addTarget:self action:@selector(onSaveButtonPressed)
+      // forControlEvents:UIControlEventTouchUpInside];
 			//[saveButton setTitle:@"Save" forState:UIControlStateNormal];
 			
-			CGSize buttonSize = CGSizeMake(55, 80.0); //Width/Height is swapped
+			// CGSize buttonSize = CGSizeMake(55, 80.0); //Width/Height is swapped
 			
-			saveButton.frame = CGRectMake(sign.bounds.size.width - buttonSize.width, sign.bounds.size.height - buttonSize.height, buttonSize.width, buttonSize.height);
-			[saveButton setBackgroundColor:[UIColor colorWithRed:250/255.f green:250/255.f blue:250/255.f alpha:1.f]];
-			[sign addSubview:saveButton];
+			// saveButton.frame = CGRectMake(sign.bounds.size.width - buttonSize.width, sign.bounds.size.height - buttonSize.height, buttonSize.width, buttonSize.height);
+			// [saveButton setBackgroundColor:[UIColor colorWithRed:250/255.f green:250/255.f blue:250/255.f alpha:1.f]];
+			// [sign addSubview:saveButton];
 			
 			//Clear button
-			clearButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-			[clearButton setTransform:CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(90))];
-			[clearButton setLineBreakMode:NSLineBreakByClipping];
-			[clearButton addTarget:self action:@selector(onClearButtonPressed)
-						forControlEvents:UIControlEventTouchUpInside];
+			// clearButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+			// [clearButton setTransform:CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(90))];
+			// [clearButton setLineBreakMode:NSLineBreakByClipping];
+			// [clearButton addTarget:self action:@selector(onClearButtonPressed)
+			// 			forControlEvents:UIControlEventTouchUpInside];
 			//[clearButton setTitle:@"Reset" forState:UIControlStateNormal];
 			
-			clearButton.frame = CGRectMake(sign.bounds.size.width - buttonSize.width, 0, buttonSize.width, buttonSize.height);
-			[clearButton setBackgroundColor:[UIColor colorWithRed:250/255.f green:250/255.f blue:250/255.f alpha:1.f]];
-			[sign addSubview:clearButton];
+			// clearButton.frame = CGRectMake(sign.bounds.size.width - buttonSize.width, 0, buttonSize.width, buttonSize.height);
+			// [clearButton setBackgroundColor:[UIColor colorWithRed:250/255.f green:250/255.f blue:250/255.f alpha:1.f]];
+			// [sign addSubview:clearButton];
 		}
 		
 	}
