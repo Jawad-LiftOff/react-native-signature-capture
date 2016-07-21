@@ -152,7 +152,7 @@
 	_square = square;
 }
 
--(void) onSaveButtonPressed {
+-(NSString*) onSaveButtonPressed {
 	saveButton.hidden = YES;
 	clearButton.hidden = YES;
 	UIImage *signImage = [self.sign signatureImage: _rotateClockwise withSquare:_square];
@@ -185,6 +185,7 @@
 		NSString *base64Encoded = [imageData base64EncodedStringWithOptions:0];
 		[self.manager saveImage: tempPath withEncoded:base64Encoded];
 	}
+    return tempPath;
 }
 
 -(void) onClearButtonPressed {

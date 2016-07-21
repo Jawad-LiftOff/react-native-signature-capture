@@ -34,4 +34,13 @@ RCT_EXPORT_VIEW_PROPERTY(square, BOOL)
 					}];
 }
 
+RCT_EXPORT_METHOD(onSaveButtonPressed: successCallback:(RCTResponseSenderBlock)successCallback) {
+    NSString* tempPath = [self.signView onSaveButtonPressed];
+    successCallback(@[tempPath]);
+}
+
+RCT_EXPORT_METHOD(onClearButtonPressed) {
+    [self.signView onClearButtonPressed];
+}
+
 @end
