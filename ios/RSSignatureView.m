@@ -161,10 +161,11 @@
 	clearButton.hidden = NO;
 	
 	NSError *error;
-	
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *documentsDirectory = [paths firstObject];
-	NSString *tempPath = [documentsDirectory stringByAppendingFormat:@"/signature.png"];
+    
+    NSString *uuidString = [[NSUUID UUID] UUIDString];
+	NSString *tempPath = [documentsDirectory stringByAppendingFormat:@"/%@.png",uuidString];
 	
 	//remove if file already exists
 	if ([[NSFileManager defaultManager] fileExistsAtPath:tempPath]) {
@@ -186,6 +187,21 @@
 		[self.manager saveImage: tempPath withEncoded:base64Encoded];
 	}
     return tempPath;
+}
+
+-(void)deleteFile:(NSString *)fileToDelete {
+    
+    NSError *error;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths firstObject];
+    
+    //remove if file already exists
+    if ([[NSFileManager defaultManager] fileExistsAtPath:fileToDelete]) {
+        [[NSFileManager defaultManager] removeItemAtPath:fileToDelete error:&error];
+        if (error) {
+            NSLog(@"Error: %@", error.debugDescription);
+        }
+    }
 }
 
 -(void) onClearButtonPressed {

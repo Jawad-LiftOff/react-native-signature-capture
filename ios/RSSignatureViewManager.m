@@ -39,6 +39,10 @@ RCT_EXPORT_METHOD(onSaveButtonPressed:(RCTResponseSenderBlock)successCallback) {
     successCallback(@[tempPath]);
 }
 
+RCT_EXPORT_METHOD(deleteFile:(NSString*)fileToDelete){
+    [self.signView deleteFile:fileToDelete];
+}
+
 RCT_EXPORT_METHOD(onClearButtonPressed) {
     [self.signView onClearButtonPressed];
 }
