@@ -331,7 +331,7 @@ static PPSSignaturePoint ViewPointToGL(CGPoint viewPoint, CGRect bounds, GLKVect
 }
 
 - (BOOL)isEmpty {
-    return length > 500 ? true : false;
+    return length > 500 ? false : true;
 }
 
 #pragma mark - Gesture Recognizers

@@ -47,4 +47,9 @@ RCT_EXPORT_METHOD(onClearButtonPressed) {
     [self.signView onClearButtonPressed];
 }
 
+RCT_EXPORT_METHOD(isEmpty:(RCTResponseSenderBlock)successCallback) {
+    BOOL isEmpty = [self.signView isEmpty];
+    successCallback(@[[NSNumber numberWithBool:isEmpty]]);
+}
+
 @end
