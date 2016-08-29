@@ -204,6 +204,10 @@
     }
 }
 
+- (BOOL)isEmpty {
+    return [self.sign isEmpty];
+}
+
 -(void) onClearButtonPressed {
 	[self.sign erase];
 }

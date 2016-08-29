@@ -10,5 +10,6 @@
 @property (nonatomic, strong) RSSignatureViewManager *manager;
 -(NSString*) onSaveButtonPressed;
 -(void) onClearButtonPressed;
--(void)deleteFile:(NSString *)fileToDelete;
+-(void) deleteFile:(NSString *)fileToDelete;
+-(BOOL) isEmpty;
 @end
